@@ -1,0 +1,37 @@
+
+pipeline {
+    agent any
+    stages {
+        stage('Downloading code')
+                {
+            
+                steps {
+                        echo 'download the code from GIT'
+                     }
+                }
+         stage('Build')
+              {
+               steps {
+                      echo ' this is build the code using maven'
+                    }
+                }
+
+       stage('Test')
+              {
+               steps {
+                      echo ' this is testing phase'
+                    }
+                }
+
+         stage('Delevery')
+              {
+               steps {
+                      echo ' this is delevery stage'
+                    }
+                }
+
+      
+            }
+        
+    }
+}
